@@ -1,22 +1,23 @@
 :root {
     --cor-fundo: #FFFFFF;
-    --cor-nav: #FCD34D;
-    --cor-botões: #2563EB;
-    --cor-textosdestaque: #FB0B00;
-    --cor-bordas: #EAB308;
+    --cor-nav: #FCD91B;
+    --cor-botões: #2F1CFC;
+    --cor-textosdestaque: #FC311C;
+    --cor-bordas: #2F2D14;
     --cor-fundomain: #FAFAFA;
 }
 
 body {
     margin: 0;
     background: var(--cor-fundo);
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     
 }
 
 h1 {
     text-align: center;
     color: var(--cor-textosdestaque);
+    font-size: 36px;
 }
 
 .container {
@@ -27,12 +28,14 @@ h1 {
 
 header {
     color: var(--cor-textosdestaque);
+    border-bottom: 3px solid var(--cor-bordas);
 }
 
 .banner {
     width: 100%;
     height: auto; /* mantém proporção */
     object-fit: contain; /*sempre a tela inteira nao deixa ser cortada*/
+    display: block;
 }
 
 nav {
@@ -92,7 +95,8 @@ nav ul li a.ativo {
 .logo {
     display: flex;
     align-items: center;
-    font-size: 32px;
+    font-size: 24px;
+    gap: 15px;
 }
 
 .logo img {
@@ -103,7 +107,7 @@ nav ul li a.ativo {
 
 .titulo {
     text-decoration: none;
-    color: var(--cor-textosdestaque);
+    color: var(--cor-botões);
 }
 
 main {
@@ -114,6 +118,7 @@ main {
     background: var(--cor-fundomain);
     border-left: 4px solid var(--cor-bordas);
     box-shadow: 0 0 15px rgb(0, 0, 0, 0.15);
+    border-right: 4px solid var(--cor-bordas);
 }
 
 main img {
@@ -133,7 +138,11 @@ main video {
 footer {
     background: var(--cor-nav);
     border-top: 3px solid var(--cor-bordas);
+    font-size: 12px;
+    text-align: center;
 }
 
-
+p {
+    font-size: 16px;
+}
 
