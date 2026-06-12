@@ -1,0 +1,158 @@
+:root {
+    --cor-fundo: #fafafa;
+    --cor-nav: #FCD91B;
+    --cor-botões: #2F1CFC;
+    --cor-textosdestaque: #FC311C;
+    --cor-bordas: #2F2D14;
+    --cor-fundomain: #FAFAFA;
+}
+
+body {
+    margin: 0;
+    background: var(--cor-fundo);
+    font-family: Arial;
+    
+}
+
+h1 {
+    text-align: center;
+    color: var(--cor-textosdestaque);
+    font-size: 36px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+
+header {
+    color: var(--cor-textosdestaque);
+    border-bottom: 3px solid var(--cor-bordas);
+}
+
+.banner {
+    width: 100%;
+    height: auto; /* mantém proporção */
+    object-fit: contain; /*sempre a tela inteira nao deixa ser cortada*/
+    display: block;
+}
+
+nav {
+    background: var(--cor-nav);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--cor-bordas);
+    padding: 5px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    flex: 1;
+}
+
+nav ul li a {
+  color: var(--cor-botões); /*Digo qual a cor que eu quero usar para o texto que fica no painel de nav */
+  position: relative; /* Se torna o elemento pai, para que os outros objetos fiquem presos a esse */
+  display: inline-block;  /*Configura o comportamento de elementos em linha, ao invés de um embaixo do outro */
+  text-decoration: none; /* Tira a decoração dos textos (O estilo de links) */
+}
+
+nav ul li a::after,
+nav ul li a::before {
+  content: '';  /* Informar a criação do pseudo - elemento (Importante para o after e before funcionar) */
+  position: absolute; /* Utilizar o layout do elemento pai */
+  width: 100%;
+  height: 2px;
+  background: var(--cor-textosdestaque);
+  bottom: -5px; 
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right; /* Começa a preencher pela direita */
+  transition: transform 0.4s ease-out; 
+}
+
+nav ul li a::before {
+  top: -5px; /* De onde vai começar */
+  transform-origin: left; /* Começa pela esquerda a animação*/
+}
+
+nav ul li a:hover::after,
+nav ul li a:hover::before {
+  transform: scaleX(1); /* Ele quer sair do 0 pra 1 (preenchido) */
+}
+
+nav ul li a.ativo {
+  font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    gap: 15px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.titulo {
+    text-decoration: none;
+    color: var(--cor-botões);
+}
+
+main {
+    padding: 20px;
+    margin: 0 15%;
+    border-radius: 10px;
+    text-align: left;
+    background: var(--cor-fundomain);
+    border-left: 4px solid var(--cor-bordas);
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.15);
+    border-right: 4px solid var(--cor-bordas);
+}
+
+main img {
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main video {
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    background: var(--cor-nav);
+    border-top: 3px solid var(--cor-bordas);
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.video {
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.spy {
+    margin-left: 150px;
+}
