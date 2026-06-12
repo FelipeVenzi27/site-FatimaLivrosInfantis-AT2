@@ -1,17 +1,17 @@
 :root {
-    --cor-fundo: #fafafa;
+    --cor-fundo: #FAFAFA;
     --cor-nav: #FCD91B;
     --cor-botões: #2F1CFC;
     --cor-textosdestaque: #FC311C;
     --cor-bordas: #2F2D14;
-    --cor-fundomain: #FAFAFA;
+    --cor-fundomain: #F2D1B3;
 }
 
 body {
     margin: 0;
     background: var(--cor-fundo);
     font-family: Arial;
-    
+    color: #333333;
 }
 
 h1 {
@@ -122,7 +122,7 @@ main {
 }
 
 main img {
-    width: 500px;
+    width: 400px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -133,6 +133,12 @@ main video {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.separar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 footer {
@@ -153,6 +159,115 @@ p {
     margin-left: auto;
     margin-right: auto;
 }
+
 .spy {
     margin-left: 150px;
 }
+
+.retrato {
+    height: 300px;
+    width: auto;
+}
+
+        .WhatsApp {
+            background-color: #25d366;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 16px;
+            text-transform: none;
+            border-radius: 50px;
+            border: none;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+
+            cursor: pointer;
+            transform: 0.3s ease;
+            text-decoration: none;
+            line-height: 1.5;
+        }
+
+        .WhatsApp:hover {
+            transform: scale(1.05);
+        }
+
+        .video {
+            align-items: center;
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #f09433, #bc1888);
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 16px;
+            text-transform: none;
+            border-radius: 50px;
+            border: none;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+
+            transition: all 0.3s ease;
+            text-decoration: none;
+            line-height: 1.5;
+        }
+
+        .instagram:hover {
+            transform: scale(1.05);
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .blogspot {
+            background-color: #f38a36;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 16px;
+            text-transform: none;
+            border-radius: 50px;
+            border: none;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+
+            transition: all 0.3s ease;
+            text-decoration: none;
+            line-height: 1.5;
+        }
+
+        .blogspot:hover {
+            transform: scale(1.05);
+        }
+
+        .facebook {
+            background-color: #1877f2;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 16px;
+            text-transform: none;
+            border-radius: 50px;
+            border: none;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+
+            transition: all 0.3s ease;
+            text-decoration: none;
+            line-height: 1.5;
+        }
+
+        .facebook:hover {
+            transform: scale(1.05);
+        }
